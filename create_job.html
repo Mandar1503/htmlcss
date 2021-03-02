@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Enter Job Data</title>
+        <link rel="stylesheet" href="jobstyle.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Flamenco&display=swap" rel="stylesheet">
+        <script  src="jscript_createjob.js"> 
+            // document.getElementById('datefield').value = moment().format('YYYY-MM-DD'); 
+        </script>
+    </head>
+    <body>
+        <h1>Enter Job Data</h1>
+        <fieldset>
+        <legend>Job Details:</legend>
+        <form onsubmit="return checkDOB()">
+            <br>
+            <label for="title">Title:</label><span style="color: red !important; display: inline; float: none;">*</span>
+            <input type="text" name="title" id="title" pattern="^[A-Z a-z]+$" placeholder="Enter your title" required><br><br>
+            
+            <label for="type">Type:</label><span style="color: red !important; display: inline; float: none;">*</span>
+            <select name="type" id="type" required>
+                <option hidden disabled selected value>--select an option--</option>
+                <option value="PAT">Programmer Analyst Trainee</option>
+                <option value="PM">Project Manager</option>
+                <option value="PA">Programmer Analyst</option>
+                <option value="SA">Senior Analyst</option>
+            </select><br><br>
+
+            <label for="department">Department:</label><span style="color: red !important; display: inline; float: none;">*</span>
+            <select name="department" id="department" required>
+                <option hidden disabled selected value>--select an option--</option>
+                <option value="IT">IT</option>
+                <option value="Management">Management</option>
+                <option value="GD">Graphics Designing</option>
+                <option value="Support">Support</option>
+            </select><br><br>
+
+            <label for="Country">Country:</label><span style="color: red !important; display: inline; float: none;">*</span>
+            <select name="Country" id="Country" required>
+                <option hidden disabled selected value>--select an option--</option>
+                <option value="India">India</option>
+                <option value="Usa">USA</option>
+                <option value="Canada">Canada</option>
+                <option value="UK">UK</option>
+                <option value="Australia">Australia</option>
+            </select><br><br>
+
+            <label for="description">Description:</label><span style="color: red !important; display: inline; float: none;">*</span>
+            <textarea  name="description" id="description" rows="10" cols="30" placeholder="Enter your job description"  required></textarea><br><br>
+
+            <label for="datefield">Opening DateField:</label><span style="color: red !important; display: inline; float: none;">*</span>
+            <input type="date" name="datefield" id="datefield" required><br><br>
+
+            <input type="submit" value="Submit" id="Submit">            
+        </form>
+        </fieldset>
+    </body>
+   
+</html>
